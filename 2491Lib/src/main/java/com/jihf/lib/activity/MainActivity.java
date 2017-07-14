@@ -14,6 +14,7 @@ import com.jihf.lib.adapter.FunAdapter;
 import com.jihf.lib.base.BaseSimpleActivity;
 import com.jihf.lib.constans.Constans;
 import com.jihf.lib.constans.URLConfig;
+import com.jihf.lib.constans.UmengConfig;
 import com.jihf.lib.entity.FunBean;
 import com.jihf.lib.http.HttpListener;
 import com.jihf.lib.http.OkGoHelper;
@@ -43,7 +44,7 @@ public class MainActivity extends BaseSimpleActivity implements HttpListener<Lis
   private boolean isLoadMore = false;
   private boolean isOnRefresh = true;
   private FunAdapter funAdapter;
-  private int page = 1;
+  private int page = 0;
   private LinearLayoutManager layoutManager;
   private boolean curDataIsNull = true;
   private int clickNum = 0;
@@ -140,7 +141,7 @@ public class MainActivity extends BaseSimpleActivity implements HttpListener<Lis
         + "\n版本名称："
         + AppUtils.getAppVersionName()
         + "\n渠道号："
-        + AppUtils.getMarket()
+        + UmengConfig.getUmengChannel()
         + "\nUA："
         + URLConfig.getUA();
     LogUtils.i(TAG, "showAppInfoDialog: " + msg);
