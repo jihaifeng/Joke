@@ -63,7 +63,7 @@ public class MainActivity extends BaseSimpleActivity implements HttpListener<Lis
     featchData(true, false);
     sfRoot.setOnRefreshListener(new RefreshListenerAdapter() {
       @Override public void onRefresh(TwinklingRefreshLayout refreshLayout) {
-        page = 1;
+        page = 0;
         featchData(false, false);
       }
 
