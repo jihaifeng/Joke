@@ -58,9 +58,9 @@
         android:theme="@android:style/Theme.Translucent.NoTitleBar"
         />
 
-    <meta-data
+  <!--  <meta-data
         android:name="UMENG_CHANNEL"
-        android:value="umeng"
-        />
+        android:value="${UMENG_CHANNEL_VALUE}"
+        />-->
   </application>
 </manifest>
