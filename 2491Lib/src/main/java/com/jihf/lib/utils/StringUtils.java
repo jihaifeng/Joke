@@ -39,10 +39,10 @@ public class StringUtils {
    * @return
    */
   public static boolean isEmpty(String... str) {
-    boolean flag = true;
+    boolean flag = false;
     for (String s : str) {
       if (isTrimEmpty(s)) {
-        flag = false;
+        flag = true;
       }
     }
     return flag;

@@ -47,7 +47,6 @@ public class AppUtils {
       return TAG_MARKET;
     }
   }
-
   /**
    * 获取App名称
    *

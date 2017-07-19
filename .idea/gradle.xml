@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/2491Lib" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/updatelib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

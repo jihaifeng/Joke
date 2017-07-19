@@ -11,14 +11,13 @@ import com.jihf.lib.constans.UrlBean;
 import com.jihf.lib.http.OkGoHelper;
 import com.jihf.lib.share.ShareBean;
 import com.jihf.lib.share.ShareConfig;
+import com.jihf.lib.update.VersionUpdate;
 import com.jihf.lib.utils.AppUtils;
 import com.jihf.lib.utils.DeviceUtils;
 import com.jihf.lib.utils.LogUtils;
 import com.jihf.lib.utils.NetworkUtils;
 import com.jihf.lib.utils.ScreenUtils;
 import com.umeng.analytics.MobclickAgent;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Func：
@@ -29,6 +28,7 @@ import static android.content.ContentValues.TAG;
  */
 
 public abstract class BaseApplication extends Application {
+  private static final String TAG = BaseApplication.class.getSimpleName().trim();
   private static BaseApplication instance;
   public static @DrawableRes int logo;
   public static @DrawableRes int splash;
@@ -67,6 +67,7 @@ public abstract class BaseApplication extends Application {
     UmengConfig.init(initUmengAppKey());
     setShare(initShare());
     setUrl(initUrl());
+    VersionUpdate.setUpdateTag(initUpdateTag());
 
     /*
      * umeng统计
@@ -78,6 +79,7 @@ public abstract class BaseApplication extends Application {
      * EScenarioType eType: 场景模式，包含统计、游戏、统计盒子、游戏盒子
      * Boolean isCrashEnable: 可选初始化. 是否开启crash模式
      */
+    Log.i(TAG, "initConfig: " + UmengConfig.getUmengChannel());
     MobclickAgent.UMAnalyticsConfig umAnalyticsConfig =
         new MobclickAgent.UMAnalyticsConfig(this, UmengConfig.getUmengAppkey(), UmengConfig.getUmengChannel(),
             MobclickAgent.EScenarioType.E_UM_NORMAL, false);
@@ -135,4 +137,6 @@ public abstract class BaseApplication extends Application {
 
   // 数组长度为定长4，分别对应umeng的Key,channel
   public abstract String initUmengAppKey();
+  // 升级使用
+  public abstract String initUpdateTag();
 }

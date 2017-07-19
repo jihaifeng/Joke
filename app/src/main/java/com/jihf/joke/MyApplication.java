@@ -29,4 +29,8 @@ public class MyApplication extends BaseApplication {
   @Override public String initUmengAppKey() {
     return null;
   }
+
+  @Override public String initUpdateTag() {
+    return null;
+  }
 }
