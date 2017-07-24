@@ -82,4 +82,3 @@ android {
   }
 
 ```
-8. 版本更新，修改VersionUpdate里面的APP_TAG值为相对应应用的代码

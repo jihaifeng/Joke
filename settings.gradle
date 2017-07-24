@@ -1,1 +1,1 @@
-include ':app', ':2491Lib', ':updatelib'
+include ':app', ':updatelib', ':2491Lib'

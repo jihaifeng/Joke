@@ -68,7 +68,6 @@ public abstract class BaseApplication extends Application {
     setShare(initShare());
     setUrl(initUrl());
     VersionUpdate.setUpdateTag(initUpdateTag());
-
     /*
      * umeng统计
      *
@@ -137,6 +136,7 @@ public abstract class BaseApplication extends Application {
 
   // 数组长度为定长4，分别对应umeng的Key,channel
   public abstract String initUmengAppKey();
-  // 升级使用
+
+  // 升级Tag
   public abstract String initUpdateTag();
 }
