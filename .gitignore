@@ -12,3 +12,4 @@
 /config.gradle
 /app/*.keystore
 /gradle
+/app/*.7z
