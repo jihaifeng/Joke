@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+      android:id="@+id/sf_root"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_fun_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+  </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+  <FrameLayout
+      android:id="@+id/fab_to_top"
+
+      android:layout_width="@dimen/dp_40"
+      android:layout_height="@dimen/dp_40"
+      android:layout_gravity="end|bottom"
+      android:layout_marginBottom="@dimen/dp_22"
+      android:layout_marginEnd="@dimen/dp_22"
+      android:layout_marginRight="@dimen/dp_22">
+
+    <com.jihf.lib.widget.CircleView
+        android:id="@+id/iv_flow_refresh_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_2"
+        />
+
+    <ImageView
+        android:id="@+id/iv_flow_refresh"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_2"
+        android:padding="@dimen/dp_5"
+        android:src="@mipmap/ic_back_top"
+        />
+  </FrameLayout>
+</FrameLayout>
